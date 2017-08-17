@@ -1,0 +1,17 @@
+.inputForm {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+.inputForm > textarea {
+    align-self: stretch;
+    width: 100%;
+}
+
+.inputForm > input {
+    margin: 10px;
+}
