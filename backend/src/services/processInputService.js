@@ -3,7 +3,7 @@ const firstBy = require('thenby');
 function ProcessInputService() {
 }
 
-const internalBuildScoreBoards = function (testCaseString) {
+const internalBuildScoreBoards = function internalBuildScoreBoards(testCaseString) {
   // console.log(testCaseString);
   const submissionsArray = testCaseString.split('\n');
 
@@ -49,8 +49,7 @@ const internalBuildScoreBoards = function (testCaseString) {
   teams = teams.sort(
     firstBy('problemsSolved', -1) // the -1 parameter indicates an ascending order.
       .thenBy('penaltyTime')
-      .thenBy('teamNumber'),
-  );
+      .thenBy('teamNumber'));
 
   let resultString = '';
   for (let i = 0; i < teams.length; i += 1) {
@@ -60,7 +59,7 @@ const internalBuildScoreBoards = function (testCaseString) {
   return resultString;
 };
 
-ProcessInputService.prototype.getTestCasesArray = function (input) {
+ProcessInputService.prototype.getTestCasesArray = function getTestCasesArray(input) {
   const result = {
     array: [],
     error: null,
@@ -88,7 +87,7 @@ ProcessInputService.prototype.getTestCasesArray = function (input) {
   return result;
 };
 
-ProcessInputService.prototype.parseTestCases = function (data) {
+ProcessInputService.prototype.parseTestCases = function parseTestCases(data) {
   const result = {
     error: data.error || null,
     array: [],
@@ -104,6 +103,6 @@ ProcessInputService.prototype.parseTestCases = function (data) {
   return result;
 };
 
-module.exports = function () {
+module.exports = function ProcessInputServiceExport() {
   return ProcessInputService;
 };

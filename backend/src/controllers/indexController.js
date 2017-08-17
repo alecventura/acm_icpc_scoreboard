@@ -1,8 +1,8 @@
-module.exports.index = function (application, req, res) {
+module.exports.index = function index(application, req, res) {
   res.send('Hello devgrid =)');
 };
 
-module.exports.processInput = function (application, req, res) {
+module.exports.processInput = function processInput(application, req, res) {
   const data = req.body;
   const input = data.input;
   if (!input) {
