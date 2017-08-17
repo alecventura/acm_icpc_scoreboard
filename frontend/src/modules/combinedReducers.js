@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import inputData from './inputData/reducer';
 
 const reducersCombined = combineReducers({
-    inputData
+  inputData,
 });
 
 export default reducersCombined;

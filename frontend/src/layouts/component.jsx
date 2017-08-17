@@ -2,19 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './style.scss';
 
-const defaultProps = {
-  main: {}
-};
+const defaultProps = {};
 
 const propTypes = {
   children: PropTypes.element.isRequired,
-  main: PropTypes.shape({})
 };
 
 const MainLayout = ({ children, main }) => (
-    <div>
-        {children}
-    </div>
+  <div>
+    {children}
+  </div>
 );
 
 MainLayout.defaultProps = defaultProps;

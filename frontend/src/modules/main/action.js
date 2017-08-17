@@ -1,11 +1,11 @@
-export const main = show => dispatch => {
+export default show => (dispatch) => {
   if (show) {
-      dispatch({
-          type: 'ENABLE_LOADING'
-      })
-  } else{
-      dispatch({
-          type: 'DISABLE_LOADING'
-      })
+    dispatch({
+      type: 'ENABLE_LOADING',
+    });
+  } else {
+    dispatch({
+      type: 'DISABLE_LOADING',
+    });
   }
-}
+};

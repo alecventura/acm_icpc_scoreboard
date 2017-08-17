@@ -8,7 +8,7 @@ const enhacers = (window.devToolsExtension ? window.devToolsExtension() : f => f
 
 const store = createStore(
   reducersCombined,
-  compose(applyMiddleware(thunk), enhacers)
+  compose(applyMiddleware(thunk), enhacers),
 );
 
 export default store;

@@ -1,19 +1,19 @@
-var express = require('express');
-var consign = require('consign');
-var bodyParser = require('body-parser');
-var cors = require('cors');
+const express = require('express');
+const consign = require('consign');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-var app = express();
+const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
 consign()
-    .include('src/routes')
-    .then('src/services')
-    .then('src/controllers')
-    .into(app);
+  .include('src/routes')
+  .then('src/services')
+  .then('src/controllers')
+  .into(app);
 
 
 module.exports = app;

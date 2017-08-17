@@ -4,12 +4,14 @@ import style from './style.scss';
 
 const defaultProps = {
   handleSubmit: () => {},
-  handleChange: () => {}
+  handleChange: () => {},
+  inputData: ''
 };
 
 const propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
+  inputData: PropTypes.string,
 };
 
 
@@ -19,17 +21,17 @@ class InputData extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e){    
+  handleSubmit(e) {
     e.preventDefault();
     this.props.handleSubmit(this.props.inputData);
   }
-  render () {
+  render() {
     return (
       <form onSubmit={this.handleSubmit} className="inputForm">
         <textarea onChange={this.props.handleChange} />
         <input type="submit" value="Process" />
-    </form>
-    )
+      </form>
+    );
   }
 }
 
