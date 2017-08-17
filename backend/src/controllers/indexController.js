@@ -10,7 +10,7 @@ module.exports.processInput = function processInput(application, req, res) {
     return;
   }
 
-  const processInputService = application.src.services.ProcessInputService;
+  const processInputService = application.src.services.processInputService;
   let result = processInputService.getTestCasesArray(input);
   result = processInputService.parseTestCases(result);
   let outputString = result.array && result.array.length > 0 ? `${result.array.join('\n')}\n` : '';
