@@ -5,10 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline --hot",
-    "prod": "webpack --progress -p"
+    "prod": "webpack --progress -p",
+    "test": "jest"
   },
   "author": "Alec Ventura",
   "license": "ISC",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -26,7 +32,11 @@
     "eslint-plugin-react": "^7.2.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^20.0.4",
+    "jest-css-modules": "^1.1.0",
+    "moxios": "^0.4.0",
     "node-sass": "^4.5.3",
+    "redux-mock-store": "^1.2.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4",

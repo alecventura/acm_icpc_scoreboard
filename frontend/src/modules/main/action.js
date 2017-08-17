@@ -1,4 +1,4 @@
-export default show => (dispatch) => {
+export const setLoading = show => (dispatch) => {
   if (show) {
     dispatch({
       type: 'ENABLE_LOADING',
@@ -9,3 +9,5 @@ export default show => (dispatch) => {
     });
   }
 };
+
+export default setLoading;
