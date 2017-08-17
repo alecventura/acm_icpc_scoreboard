@@ -1,8 +1,5 @@
 const firstBy = require('thenby');
 
-function ProcessInputService() {
-}
-
 const internalBuildScoreBoards = function internalBuildScoreBoards(testCaseString) {
   // console.log(testCaseString);
   const submissionsArray = testCaseString.split('\n');
@@ -59,7 +56,7 @@ const internalBuildScoreBoards = function internalBuildScoreBoards(testCaseStrin
   return resultString;
 };
 
-ProcessInputService.prototype.getTestCasesArray = function getTestCasesArray(input) {
+const getTestCasesArray = function getTestCasesArray(input) {
   const result = {
     array: [],
     error: null,
@@ -67,6 +64,9 @@ ProcessInputService.prototype.getTestCasesArray = function getTestCasesArray(inp
   let numTestsCases = 0;
   try {
     numTestsCases = parseInt(input.split('\n')[0], 10);
+    if (isNaN(numTestsCases)) {
+      throw new Error();
+    }
   } catch (error) {
     result.error = 'First line should be a integer and specify the number of cases.';
     return result;
@@ -87,7 +87,7 @@ ProcessInputService.prototype.getTestCasesArray = function getTestCasesArray(inp
   return result;
 };
 
-ProcessInputService.prototype.parseTestCases = function parseTestCases(data) {
+const parseTestCases = function parseTestCases(data) {
   const result = {
     error: data.error || null,
     array: [],
@@ -103,6 +103,9 @@ ProcessInputService.prototype.parseTestCases = function parseTestCases(data) {
   return result;
 };
 
-module.exports = function ProcessInputServiceExport() {
-  return ProcessInputService;
+module.exports = function ProcessInputService() {
+  return {
+    getTestCasesArray,
+    parseTestCases,
+  };
 };

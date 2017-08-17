@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "prod": "node app.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +19,13 @@
     "thenby": "^1.2.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^4.4.1",
     "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^20.0.4",
+    "superagent": "^3.5.2",
+    "supertest": "^3.0.0"
   }
 }
