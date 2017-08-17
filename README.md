@@ -15,6 +15,6 @@ Inside the destination folder will have 2 folders, one for FrontEnd project and 
 ### For FrontEnd: 
 ##### (The BackEnd server needs to be running on port 3002 so the FrontEnd can access it).
 - A production version will be available inside dist/ folder, just open the index.html inside that folder if you just want to use it.
-- But if you want to developer, build or run the tests a 'npm install' command is needed.
+- But if you want to develop, build or run the tests a 'npm install' command is needed.
 	- Then to run the webpack-dev-server use the command: 'npm run dev' -> this will start it on port 3003.
 - To run the tests type 'npm run test'
