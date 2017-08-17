@@ -1,7 +1,27 @@
-.mainContainer {
+.componentsContainer {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
-    height: 95vh;
+    height: 92vh;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column; 
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #362d94;
+    margin-top: 10px;
+    color: yellow;
+    border-radius: 6px;
+}
+
+textarea {
+    border-radius: 6px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
